@@ -10,15 +10,17 @@ from torch.nn.modules import Identity
 
 from .computation_node import NodeContainer
 from .computation_node import TensorNode, ModuleNode, FunctionNode
-from .utils import updated_dict, assert_input_type
+from .scheme import ColorScheme, LIGHT_THEME, DARK_THEME
+from .utils import updated_dict, assert_input_type, get_torch_layer_types
 
 COMPUTATION_NODES = Union[TensorNode, ModuleNode, FunctionNode]
 
-node2color = {
-    TensorNode: "lightyellow",
-    ModuleNode: "darkseagreen1",
-    FunctionNode: "aliceblue",
-}
+# node2color = {
+#     TensorNode: "lightyellow",
+#     ModuleNode: "darkseagreen1",
+#     FunctionNode: "aliceblue",
+# }
+_LAYER_TYPE_MAPPING = get_torch_layer_types()
 
 # TODO: Currently, we only use directed graphviz graph since DNN are
 # graphs except for e.g. graph neural network (GNN). Experiment on GNN
@@ -67,6 +69,9 @@ class ComputationGraph:
         hide_module_functions: bool = True,
         roll: bool = True,
         depth: int | float = 3,
+        html_config: dict[str, Any] = {},
+        color_scheme: ColorScheme = LIGHT_THEME,
+        dark_mode: bool = False,
     ):
         '''
         Resets the running_node_id, id_dict when a new ComputationGraph is initialized.
@@ -80,15 +85,19 @@ class ComputationGraph:
         self.hide_module_functions = hide_module_functions
         self.roll = roll
         self.depth = depth
+        self.color_scheme = color_scheme
+        self.dark_mode = dark_mode
 
         # specs for html table, needed for node labels
         self.html_config = {
-            'border': 0,
-            'cell_border': 1,
+            'border': 1,
+            'cell_border': 0,
             'cell_spacing': 0,
-            'cell_padding': 4,
+            'cell_padding': 2,
             'col_span': 2,
             'row_span': 2,
+            'tensor_shape_sep': ', ',
+            **html_config,
         }
         self.reset_graph_history()
 
@@ -178,7 +187,8 @@ class ComputationGraph:
             ) as cur_cont:
                 if display_nested:
                     cur_cont.attr(
-                        style='dashed', label=k.name, labeljust='l', fontsize='12'
+                        style='dashed', label=k.name, labeljust='l', fontsize='12',
+                        color=self.html_config.get('cont_color', 'black')
                     )
                     new_kwargs = updated_dict(new_kwargs, 'subgraph', cur_cont)
                 for g in v:
@@ -355,54 +365,80 @@ class ComputationGraph:
         if node.node_id not in self.id_dict:
             self.id_dict[node.node_id] = self.running_node_id
             self.running_node_id += 1
-        label = self.get_node_label(node)
-        node_color = ComputationGraph.get_node_color(node)
+        node_color = ComputationGraph.get_node_color(node, scheme=self.color_scheme)
+        label = self.get_node_label(node, color=node_color)
 
         if subgraph is None:
             subgraph = self.visual_graph
         subgraph.node(
-            name=f'{self.id_dict[node.node_id]}', label=label, fillcolor=node_color,
+            name=f'{self.id_dict[node.node_id]}', label=label
         )
         self.node_set.add(id(node))
 
-    def get_node_label(self, node: COMPUTATION_NODES) -> str:
+    def get_node_label(self, node: COMPUTATION_NODES, color: str) -> str:
         '''Returns html-like format for the label of node. This html-like
         label is based on Graphviz API for html-like format. For setting of node label
         it uses graph config and html_config.'''
-        input_str = 'input'
-        output_str = 'output'
+        input_str = 'I'
+        output_str = 'O'
         border = self.html_config['border']
         cell_sp = self.html_config['cell_spacing']
         cell_pad = self.html_config['cell_padding']
         cell_bor = self.html_config['cell_border']
+        shape_sep = self.html_config['tensor_shape_sep']
+
+        additional_params = ''
+        if isinstance(node, ModuleNode):
+            params = []
+            for param, value in node.params.items():
+                params.append(f'''\
+                <TR>
+                    <TD ALIGN="LEFT"><B>{param}</B>\u2002{shape_repr(value, sep=shape_sep)}</TD>
+                </TR>''')
+            additional_params = '\n'.join(params)
+
         if self.show_shapes:
             if isinstance(node, TensorNode):
                 label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
-                        <TR><TD>{node.name}<BR/>depth:{node.depth}</TD><TD>{node.tensor_shape}</TD></TR>
+                        <TR>
+                            <TD BGCOLOR="{color}" ALIGN="LEFT"
+                            BORDER="{border}" SIDES="B"
+                            >{node.name}<BR ALIGN="LEFT"/>[depth:{node.depth}]</TD>
+                        </TR>
+                        <TR>
+                            <TD>{shape_repr(node.tensor_shape, sep=shape_sep)}</TD>
+                        </TR>
+                        {additional_params}
                     </TABLE>>'''
             else:
-                input_repr = compact_list_repr(node.input_shape)
-                output_repr = compact_list_repr(node.output_shape)
+                input_repr = compact_list_repr(shape_repr(node.input_shape, sep=shape_sep))
+                output_repr = compact_list_repr(shape_repr(node.output_shape, sep=shape_sep))
                 label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
-                    <TR>
-                        <TD ROWSPAN="2">{node.name}<BR/>depth:{node.depth}</TD>
-                        <TD COLSPAN="2">{input_str}:</TD>
-                        <TD COLSPAN="2">{input_repr} </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">{output_str}: </TD>
-                        <TD COLSPAN="2">{output_repr} </TD>
-                    </TR>
+                        <TR>
+                            <TD BGCOLOR="{color}" ALIGN="LEFT"
+                            BORDER="{border}" SIDES="B"
+                            >{node.name}<BR ALIGN="LEFT"/>[depth:{node.depth}]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>{input_str}</B>\u2002{input_repr}</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>{output_str}</B>\u2002{output_repr}</TD>
+                        </TR>
+                        {additional_params}
                     </TABLE>>'''
         else:
             label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
-                        <TR><TD>{node.name}<BR/>depth:{node.depth}</TD></TR>
+                        <TR>
+                            <TD BGCOLOR="{color}" ALIGN="LEFT">{node.name}<BR ALIGN="LEFT"/>[depth:{node.depth}]</TD>
+                        </TR>
+                        {additional_params}
                     </TABLE>>'''
         return label
 
@@ -425,9 +461,16 @@ class ComputationGraph:
 
     @staticmethod
     def get_node_color(
-        node: COMPUTATION_NODES
+        node: COMPUTATION_NODES,
+        scheme: ColorScheme = ColorScheme(),
     ) -> str:
-        return node2color[type(node)]
+        if isinstance(node, ModuleNode):
+            return (
+                scheme.get(_LAYER_TYPE_MAPPING.get(node.name))
+                or scheme.get('ModuleNode')
+            )
+        return scheme.get(type(node).__name__)
+
 
     def check_node(self, node: COMPUTATION_NODES) -> None:
         assert node.node_id != 'null', f'wrong id {node} {type(node)}'
@@ -438,6 +481,13 @@ class ComputationGraph:
         ), (
             f'tensor must have single input node {node}'
         )
+
+
+def shape_repr(shape: tuple[int, ...] | list[tuple], sep: str = "x") -> str | list:
+    '''Returns string representation of shape'''
+    if isinstance(shape, list):  # iterate through all tuples
+        return [f'({sep.join(map(str, shp))})' for shp in shape]
+    return f'({sep.join(map(str, shape))})'
 
 
 def compact_list_repr(x: list[Any]) -> str:
@@ -453,7 +503,7 @@ def compact_list_repr(x: list[Any]) -> str:
         if cnt == 1:
             x_repr += f'{elem}, '
         else:
-            x_repr += f'{cnt} x {elem}, '
+            x_repr += f'{cnt}x{elem}, '
 
     # get rid of last comma
     return x_repr[:-2]

@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+from collections import defaultdict
 from collections.abc import Iterable
 from typing import TypeVar, MutableSet, Any, Generator
 
+from torch import nn
 from torch.nn.parameter import Parameter
 
 T = TypeVar('T')
@@ -72,3 +74,32 @@ def assert_input_type(
         f'given input with wrong type. The input is of type: '
         f'{type(in_var)}. But, it should be {valid_input_types}'
     )
+
+
+def get_torch_layer_types() -> dict:
+    '''Get mapping of layer types to their respective modules.'''
+    _layer_types = dict()
+    # _layer_modules = set(
+    #     t for t in nn.modules.__dir__()
+    #     if type(getattr(nn.modules, t)).__name__ == "module"
+    # ) - {"_functions", "loss", "module", "utils"}
+    _layer_modules = {
+        "activation", "adaptive", "batchnorm",
+        "channelshuffle", "container", "conv", "distance",
+        "dropout", "flatten", "fold", "instancenorm", "lazy",
+        "linear", "normalization", "padding", "pixelshuffle",
+        "pooling", "rnn", "sparse", "transformer", "upsampling"
+    }
+
+    for _name in _layer_modules:
+        _module = getattr(nn.modules, _name)
+        if not hasattr(_module, '__all__'):
+            continue
+
+        for module in _module.__all__:
+            try:
+                _layer_types[getattr(nn, module).__name__] = _name
+            except AttributeError:
+                continue
+
+    return _layer_types

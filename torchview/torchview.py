@@ -19,6 +19,7 @@ from .recorder_tensor import (
     reduce_data_info, collect_tensor_node, Recorder
 
 )
+from .scheme import ColorScheme, LIGHT_THEME, DARK_THEME
 
 COMPILED_MODULES = (ScriptModule,)
 
@@ -50,6 +51,8 @@ def draw_graph(
     save_graph: bool = False,
     filename: str | None = None,
     directory: str = '.',
+    dark_mode: bool = False,
+    color_scheme: ColorScheme = LIGHT_THEME,
     **kwargs: Any,
 ) -> ComputationGraph:
     '''Returns visual representation of the input Pytorch Module with
@@ -158,6 +161,12 @@ def draw_graph(
             directory in which to store graphviz output files.
             Default: .
 
+        dark_mode (bool):
+            If true, uses dark theme for visual graph
+
+        color_scheme (ColorScheme):
+            Color scheme for visual graph
+
     Returns:
         ComputationGraph object that contains visualization of the input
         pytorch model in the form of graphviz Digraph object
@@ -195,13 +204,50 @@ def draw_graph(
         'fontsize': '10',
         'ranksep': '0.1',
         'height': '0.2',
+        # 'fontname': 'Monospace',  #'Linux libertine',
         'fontname': 'Linux libertine',
         'margin': '0',
+        'color': '#909090',
+        'fillcolor': '#ffffff90',
     }
 
     edge_attr = {
         'fontsize': '10',
     }
+
+    html_config = {}
+
+    # TODO: These `if` blocks looks a bit ugly. Perhaps refactor it?
+    if dark_mode and color_scheme == LIGHT_THEME:
+        color_scheme = DARK_THEME
+
+    if dark_mode:
+        graph_attr = {
+            **graph_attr,
+            'bgcolor': '#404040',
+            'fontcolor': 'white',
+        }
+        node_attr = {
+            **node_attr,
+            'color': '#1c1c1c',
+            'fillcolor': '#2c2c2c',
+            'fontcolor': 'white',
+        }
+        edge_attr = {
+            **edge_attr,
+            'color': '#aaaaaa',
+            'fontcolor': 'white',
+        }
+        html_config = {
+            **html_config,
+            'cont_color': '#909090',
+        }
+
+    node_attr.update(kwargs.pop('node_attr', {}))
+    edge_attr.update(kwargs.pop('edge_attr', {}))
+    graph_attr.update(kwargs.pop('graph_attr', {}))
+    html_config.update(kwargs.pop('html_config', {}))
+
     visual_graph = graphviz.Digraph(
         name=graph_name, engine='dot', strict=strict,
         graph_attr=graph_attr, node_attr=node_attr, edge_attr=edge_attr,
@@ -214,7 +260,9 @@ def draw_graph(
 
     model_graph = ComputationGraph(
         visual_graph, input_nodes, show_shapes, expand_nested,
-        hide_inner_tensors, hide_module_functions, roll, depth
+        hide_inner_tensors, hide_module_functions, roll, depth,
+        html_config=html_config, color_scheme=color_scheme,
+        dark_mode=dark_mode
     )
 
     forward_prop(

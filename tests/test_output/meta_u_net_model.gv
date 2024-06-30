@@ -1,277 +1,388 @@
 strict digraph UNet2 {
 	graph [ordering=in rankdir=TB size="13.799999999999999,13.799999999999999"]
-	node [align=left fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 1, 28, 28)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 1, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	1 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Conv2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (96, 1, 3, 3)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (96)</TD>
+                </TR>
+                    </TABLE>>]
 	2 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BatchNorm2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BatchNorm2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (96)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (96)</TD>
+                </TR>
+                    </TABLE>>]
 	3 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">ReLU<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	4 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Conv2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Conv2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (96, 96, 3, 3)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (96)</TD>
+                </TR>
+                    </TABLE>>]
 	5 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BatchNorm2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BatchNorm2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (96)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (96)</TD>
+                </TR>
+                    </TABLE>>]
 	6 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">ReLU<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	7 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">MaxPool2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >MaxPool2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 14, 14)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	8 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">DoubleConv<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >DoubleConv<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	9 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">MaxPool2d<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 7, 7) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >MaxPool2d<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 7, 7)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	10 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">DoubleConv<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 192, 7, 7) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 384, 7, 7) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >DoubleConv<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 192, 7, 7)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 384, 7, 7)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	11 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 384, 7, 7) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ConvTranspose2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 384, 7, 7)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (384, 192, 2, 2)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (192)</TD>
+                </TR>
+                    </TABLE>>]
 	12 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">pad<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >pad<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	13 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">cat<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">2 x (1, 192, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 384, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >cat<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 192, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 384, 14, 14)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	14 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Sequential<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 384, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Sequential<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 384, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	15 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">ConvTranspose2d<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 192, 14, 14) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ConvTranspose2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 192, 14, 14)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (192, 96, 2, 2)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (96)</TD>
+                </TR>
+                    </TABLE>>]
 	16 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">pad<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >pad<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	17 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">cat<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">2 x (1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 192, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >cat<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 192, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	18 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Sequential<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 192, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Sequential<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 192, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	19 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Conv2d<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 96, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 96, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 28, 28)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (1, 96, 1, 1)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (1)</TD>
+                </TR>
+                    </TABLE>>]
 	20 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">add_<BR/>depth:1</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">2 x (1, 1, 28, 28) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 28, 28) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >add_<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 1, 28, 28)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	21 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 1, 28, 28)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 1, 28, 28)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	0 -> 20
 	0 -> 1
 	1 -> 2

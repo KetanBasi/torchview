@@ -1,347 +1,551 @@
 strict digraph SiameseNets {
 	graph [ordering=in rankdir=TB size="40.5,40.5"]
-	node [align=left fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	1 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	2 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	3 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	4 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	5 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	6 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	7 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	8 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	9 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	10 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	11 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	12 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	13 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	14 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	15 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	16 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	17 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	18 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	19 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	20 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	21 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	22 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	23 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	24 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	25 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	26 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	27 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	28 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	29 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	30 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	31 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	32 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	33 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	34 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	35 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	36 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	37 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	38 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	39 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	40 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	41 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	42 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	43 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	44 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>conv2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">conv2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	45 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	46 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>relu<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">relu<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	47 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	48 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>max_pool2d<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">max_pool2d<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	49 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	50 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>view<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">view<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	51 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	52 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>view<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">view<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	53 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	54 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>linear<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	55 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	56 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>linear<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	57 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	58 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>sub<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">sub<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	59 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	60 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>abs<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">abs<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	61 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	62 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>dropout<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">dropout<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	63 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	64 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>linear<BR/>depth:2</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	65 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>hidden-tensor<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	66 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>sigmoid<BR/>depth:1</TD></TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT">sigmoid<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	67 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>output-tensor<BR/>depth:0</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT">output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	0 -> 2
 	3 -> 4
 	2 -> 3

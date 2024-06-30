@@ -1,0 +1,249 @@
+strict digraph MLP {
+	graph [bgcolor="#404040" fontcolor=white ordering=in rankdir=TB size="12.0,12.0"]
+	node [align=left color="#1c1c1c" fillcolor="#2c2c2c" fontcolor=white fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	edge [color="#aaaaaa" fontcolor=white fontsize=10]
+	0 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkgoldenrod4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 128)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	1 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 128)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 64)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (64, 128)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (64)</TD>
+                </TR>
+                    </TABLE>>]
+	2 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 64)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 64)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	3 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 64)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 32)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (32, 64)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (32)</TD>
+                </TR>
+                    </TABLE>>]
+	4 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 32)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 32)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	5 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 32)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 16)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (16, 32)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (16)</TD>
+                </TR>
+                    </TABLE>>]
+	6 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 16)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 16)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	7 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 16)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 8)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (8, 16)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (8)</TD>
+                </TR>
+                    </TABLE>>]
+	8 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 8)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 8)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	9 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 8)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 4)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (4, 8)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (4)</TD>
+                </TR>
+                    </TABLE>>]
+	10 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 4)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 4)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	11 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 4)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 2)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (2, 4)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (2)</TD>
+                </TR>
+                    </TABLE>>]
+	12 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkgoldenrod4" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 2)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	0 -> 1
+	1 -> 2
+	2 -> 3
+	3 -> 4
+	4 -> 5
+	5 -> 6
+	6 -> 7
+	7 -> 8
+	8 -> 9
+	9 -> 10
+	10 -> 11
+	11 -> 12
+}

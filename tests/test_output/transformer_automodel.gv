@@ -1,402 +1,534 @@
 strict digraph bert {
 	graph [ordering=in rankdir=TB size="21.599999999999998,21.599999999999998"]
-	node [align=left fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 26)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	1 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 26)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	2 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 26)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	3 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__getitem__<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Embedding<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (28996, 768)</TD>
+                </TR>
+                    </TABLE>>]
 	4 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">to<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Embedding<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (2, 768)</TD>
+                </TR>
+                    </TABLE>>]
 	5 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__rsub__<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >add<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 26, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	6 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">mul<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 26) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >add_<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	7 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Embedding<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >LayerNorm<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (768)</TD>
+                </TR>
+                    </TABLE>>]
 	8 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Embedding<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Dropout<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	9 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">2 x (1, 26, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__getitem__<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	10 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">add_<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >to<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	11 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">LayerNorm<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__rsub__<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	12 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Dropout<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >mul<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 26)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	13 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	14 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	15 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	16 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	17 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	18 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	19 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	20 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	21 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	22 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	23 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	24 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768), (1, 1, 1, 26) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768), (1, 1, 1, 26)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 26, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	25 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__getitem__<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 26, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__getitem__<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 26, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	26 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (768, 768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (768)</TD>
+                </TR>
+                    </TABLE>>]
 	27 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Tanh<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Tanh<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	28 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Dropout<BR/>depth:1</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Dropout<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	29 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Linear<BR/>depth:1</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 2) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 2)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (2, 768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (2)</TD>
+                </TR>
+                    </TABLE>>]
 	30 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 2)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
-	2 -> 3
-	3 -> 4
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 2)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	2 -> 9
+	0 -> 3
+	1 -> 4
+	3 -> 5
 	4 -> 5
 	5 -> 6
-	0 -> 7
-	1 -> 8
-	7 -> 9
-	8 -> 9
+	6 -> 7
+	7 -> 8
 	9 -> 10
 	10 -> 11
 	11 -> 12
+	8 -> 13
 	12 -> 13
-	6 -> 13
-	6 -> 14
-	6 -> 15
-	6 -> 16
-	6 -> 17
-	6 -> 18
-	6 -> 19
-	6 -> 20
-	6 -> 21
-	6 -> 22
-	6 -> 23
-	6 -> 24
+	12 -> 14
+	12 -> 15
+	12 -> 16
+	12 -> 17
+	12 -> 18
+	12 -> 19
+	12 -> 20
+	12 -> 21
+	12 -> 22
+	12 -> 23
+	12 -> 24
 	13 -> 14
 	14 -> 15
 	15 -> 16
@@ -417,415 +549,547 @@ strict digraph bert {
 }
 strict digraph bert {
 	graph [ordering=in rankdir=TB size="25.2,25.2"]
-	node [align=left fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 23)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	1 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 23)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	2 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>input-tensor<BR/>depth:0</TD><TD>(1, 23)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	subgraph cluster_2 {
-		fontsize=12 label=BertModel labeljust=l style=dashed
-		3 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__getitem__<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
-		4 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">to<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
-		5 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__rsub__<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
-		6 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">mul<BR/>depth:2</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 1, 1, 23) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+		color=black fontsize=12 label=BertModel labeljust=l style=dashed
 		subgraph cluster_3 {
-			fontsize=12 label=BertEmbeddings labeljust=l style=dashed
+			color=black fontsize=12 label=BertEmbeddings labeljust=l style=dashed
+			3 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Embedding<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (28996, 768)</TD>
+                </TR>
+                    </TABLE>>]
+			4 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Embedding<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (2, 768)</TD>
+                </TR>
+                    </TABLE>>]
+			5 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >add<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 23, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+			6 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >add_<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			7 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Embedding<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >LayerNorm<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (768)</TD>
+                </TR>
+                    </TABLE>>]
 			8 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Embedding<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
-			9 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">add<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">2 x (1, 23, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
-			10 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">add_<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
-			11 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">LayerNorm<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
-			12 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Dropout<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Dropout<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 		}
+		9 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__getitem__<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+		10 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >to<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+		11 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__rsub__<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+		12 [label=<
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >mul<BR ALIGN="LEFT"/>[depth:2]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 1, 1, 23)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 		subgraph cluster_4 {
-			fontsize=12 label=BertEncoder labeljust=l style=dashed
+			color=black fontsize=12 label=BertEncoder labeljust=l style=dashed
 			13 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			14 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			15 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			16 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			17 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			18 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			19 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			20 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			21 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			22 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			23 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			24 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">BertLayer<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768), (1, 1, 1, 23) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >BertLayer<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768), (1, 1, 1, 23)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 23, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 		}
 		subgraph cluster_5 {
-			fontsize=12 label=BertPooler labeljust=l style=dashed
+			color=black fontsize=12 label=BertPooler labeljust=l style=dashed
 			25 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">__getitem__<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 23, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=aliceblue]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >__getitem__<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 23, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 			26 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Linear<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (768, 768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (768)</TD>
+                </TR>
+                    </TABLE>>]
 			27 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Tanh<BR/>depth:3</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Tanh<BR ALIGN="LEFT"/>[depth:3]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 		}
 	}
 	28 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Dropout<BR/>depth:1</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="darkseagreen1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Dropout<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 768)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
 	29 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                    <TR>
-                        <TD ROWSPAN="2">Linear<BR/>depth:1</TD>
-                        <TD COLSPAN="2">input:</TD>
-                        <TD COLSPAN="2">(1, 768) </TD>
-                    </TR>
-                    <TR>
-                        <TD COLSPAN="2">output: </TD>
-                        <TD COLSPAN="2">(1, 2) </TD>
-                    </TR>
-                    </TABLE>> fillcolor=darkseagreen1]
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >Linear<BR ALIGN="LEFT"/>[depth:1]</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>I</B> (1, 768)</TD>
+                        </TR>
+                        <TR>
+                            <TD ALIGN="LEFT"><B>O</B> (1, 2)</TD>
+                        </TR>
+                                        <TR>
+                    <TD ALIGN="LEFT"><B>weight</B> (2, 768)</TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT"><B>bias</B> (2)</TD>
+                </TR>
+                    </TABLE>>]
 	30 [label=<
-                    <TABLE BORDER="0" CELLBORDER="1"
-                    CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD>output-tensor<BR/>depth:0</TD><TD>(1, 2)</TD></TR>
-                    </TABLE>> fillcolor=lightyellow]
-	2 -> 3
-	3 -> 4
+                    <TABLE BORDER="1" CELLBORDER="0"
+                    CELLSPACING="0" CELLPADDING="2">
+                        <TR>
+                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            BORDER="1" SIDES="B"
+                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
+                        </TR>
+                        <TR>
+                            <TD>(1, 2)</TD>
+                        </TR>
+                        
+                    </TABLE>>]
+	2 -> 9
+	0 -> 3
+	1 -> 4
+	3 -> 5
 	4 -> 5
 	5 -> 6
-	0 -> 7
-	1 -> 8
-	7 -> 9
-	8 -> 9
+	6 -> 7
+	7 -> 8
 	9 -> 10
 	10 -> 11
 	11 -> 12
+	8 -> 13
 	12 -> 13
-	6 -> 13
-	6 -> 14
-	6 -> 15
-	6 -> 16
-	6 -> 17
-	6 -> 18
-	6 -> 19
-	6 -> 20
-	6 -> 21
-	6 -> 22
-	6 -> 23
-	6 -> 24
+	12 -> 14
+	12 -> 15
+	12 -> 16
+	12 -> 17
+	12 -> 18
+	12 -> 19
+	12 -> 20
+	12 -> 21
+	12 -> 22
+	12 -> 23
+	12 -> 24
 	13 -> 14
 	14 -> 15
 	15 -> 16

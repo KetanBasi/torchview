@@ -71,6 +71,7 @@ class ModuleNode(Node):
         self.output_shape: list[Tuple[int, ...]] = []
         self.output_nodes = NodeContainer() if output_nodes is None else output_nodes
         self.set_node_id()
+        self.get_module_parameters(module_unit)
 
     def set_input_shape(self, input_shape: list[Tuple[int, ...]]) -> None:
         self.input_shape = input_shape
@@ -97,6 +98,20 @@ class ModuleNode(Node):
                 self.node_id = f'{self.compute_unit_id}-{output_id}'
             else:
                 self.node_id = f'{self.compute_unit_id}-'
+
+    def get_module_parameters(self, module_unit) -> None:
+        '''Get layer parameters'''
+        def _get_param(param: str) -> tuple[int, ...]:
+            _param = getattr(module_unit, param, None)
+
+            if isinstance(_param, torch.Tensor):
+                return {param: tuple(_param.size())}
+
+            return {}
+
+        self.params = {}
+        self.params.update(_get_param('weight'))
+        self.params.update(_get_param('bias'))
 
 
 class FunctionNode(Node):

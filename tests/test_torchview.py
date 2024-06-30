@@ -28,6 +28,7 @@ from tests.fixtures.models import (
     IsolatedTensor,
 )
 from torchview import draw_graph
+from torchview.scheme import ColorScheme
 
 # pass verifty_result fixture to test functions
 # so it can be used as a wrapper function
@@ -393,4 +394,53 @@ def test_isolated_tensor(verify_result: Callable[..., Any]) -> None:
         device='cpu'
     )
 
+    verify_result([model_graph])
+
+
+def test_dark_theme(verify_result: Callable[..., Any]) -> None:
+    model = MLP()
+    model_graph = draw_graph(
+        model, input_size=(1, 128),
+        graph_name='MLP',
+        dark_mode=True,
+    )
+    verify_result([model_graph])
+
+
+def test_dark_theme_with_custom_colors(verify_result: Callable[..., Any]) -> None:
+    model = SiameseNets()
+    model_graph = draw_graph(
+        model, input_size=[(1, 1, 88, 88), (1, 1, 88, 88)],
+        graph_name='SiameseNets',
+        dark_mode=True,
+        color_scheme=ColorScheme(
+            TensorNode='darkseagreen4',
+            ModuleNode='cadetblue4',
+            FunctionNode='darkgoldenrod4',
+            conv='deepskyblue4',
+            dropout='deeppink4',
+            linear='darkorchid4',
+            pooling='indianred4',
+        ),
+    )
+    verify_result([model_graph])
+
+
+def test_custom_html_config(verify_result: Callable[..., Any]) -> None:
+    model = MLP()
+    model_graph = draw_graph(
+        model, input_size=(1, 128),
+        graph_name='MLP',
+        html_config={
+            'cell_padding': 4,
+            'tensor_shape_sep': 'x',
+        },
+        node_attr={
+            'fillcolor': '#72976290',
+        },
+        edge_attr={
+            'style': 'dotted',
+            'color': 'gray',
+        },
+    )
     verify_result([model_graph])
