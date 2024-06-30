@@ -1,7 +1,7 @@
 strict digraph SiameseNets {
-	graph [bgcolor="#404040" fontcolor=white ordering=in rankdir=TB size="21.3,21.3"]
-	node [align=left color="#1c1c1c" fillcolor="#2c2c2c" fontcolor=white fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
-	edge [color="#aaaaaa" fontcolor=white fontsize=10]
+	graph [ordering=in rankdir=TB size="21.3,21.3"]
+	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	edge [fontsize=10]
 	0 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">

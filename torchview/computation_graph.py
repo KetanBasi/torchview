@@ -89,16 +89,28 @@ class ComputationGraph:
         self.dark_mode = dark_mode
 
         # specs for html table, needed for node labels
+        # Set the default values
         self.html_config = {
-            'border': 1,
-            'cell_border': 0,
-            'cell_spacing': 0,
-            'cell_padding': 2,
-            'col_span': 2,
-            'row_span': 2,
             'tensor_shape_sep': ', ',
-            **html_config,
+            'param_pos': 'right',
         }
+        if html_config.get('param_pos', self.html_config['param_pos']) == 'right':
+            self.html_config.update({
+                'border': 0,
+                'cell_border': 1,
+                'cell_spacing': 0,
+                'cell_padding': 4,
+                'fill_node': True,
+            })
+        elif html_config.get('param_pos', self.html_config['param_pos']) == 'bottom':
+            self.html_config.update({
+                'border': 1,
+                'cell_border': 0,
+                'cell_spacing': 0,
+                'cell_padding': 2,
+                'fill_node': False,
+            })
+        self.html_config.update(html_config)
         self.reset_graph_history()
 
     def reset_graph_history(self) -> None:
@@ -368,10 +380,13 @@ class ComputationGraph:
         node_color = ComputationGraph.get_node_color(node, scheme=self.color_scheme)
         label = self.get_node_label(node, color=node_color)
 
+        attrs = {}
+        if self.html_config.get('fill_node', True):
+            attrs['fillcolor'] = node_color
         if subgraph is None:
             subgraph = self.visual_graph
         subgraph.node(
-            name=f'{self.id_dict[node.node_id]}', label=label
+            name=f'{self.id_dict[node.node_id]}', label=label, **attrs,
         )
         self.node_set.add(id(node))
 
@@ -379,26 +394,47 @@ class ComputationGraph:
         '''Returns html-like format for the label of node. This html-like
         label is based on Graphviz API for html-like format. For setting of node label
         it uses graph config and html_config.'''
-        input_str = 'I'
-        output_str = 'O'
+        input_str = self.html_config.get('input_str', 'input')
+        output_str = self.html_config.get('output_str', 'output')
         border = self.html_config['border']
         cell_sp = self.html_config['cell_spacing']
         cell_pad = self.html_config['cell_padding']
         cell_bor = self.html_config['cell_border']
         shape_sep = self.html_config['tensor_shape_sep']
+        param_pos = self.html_config.get('param_pos', 'right')
+        head_row_span = self.html_config.get('row_span', 2)
 
+        is_module_node = isinstance(node, ModuleNode)
         additional_params = ''
-        if isinstance(node, ModuleNode):
-            params = []
+        params = []
+
+        if is_module_node and param_pos == 'right':
             for param, value in node.params.items():
                 params.append(f'''\
                 <TR>
-                    <TD ALIGN="LEFT"><B>{param}</B>\u2002{shape_repr(value, sep=shape_sep)}</TD>
+                    <TD>{param}:</TD>
+                    <TD>{shape_repr(value, sep=shape_sep)}</TD>
                 </TR>''')
-            additional_params = '\n'.join(params)
 
-        if self.show_shapes:
-            if isinstance(node, TensorNode):
+        elif is_module_node and param_pos == 'bottom':
+            for param, value in node.params.items():
+                params.append(f'''\
+                <TR>
+                    <TD ALIGN="LEFT"><B>{param}</B>\u2002{shape_repr(value, sep=shape_sep)}</TD>\
+                </TR>''')
+
+        additional_params = '\n'.join(params)
+
+        if self.show_shapes and isinstance(node, TensorNode):
+            if param_pos == 'right':
+                label = f'''<
+                    <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
+                    CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
+                        <TR><TD BGCOLOR="{color}">{node.name}<BR/>depth:{node.depth}</TD><TD>{
+                            shape_repr(node.tensor_shape, sep=shape_sep)
+                        }</TD></TR>
+                    </TABLE>>'''
+            elif param_pos == 'bottom':
                 label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
@@ -410,11 +446,27 @@ class ComputationGraph:
                         <TR>
                             <TD>{shape_repr(node.tensor_shape, sep=shape_sep)}</TD>
                         </TR>
-                        {additional_params}
                     </TABLE>>'''
-            else:
-                input_repr = compact_list_repr(shape_repr(node.input_shape, sep=shape_sep))
-                output_repr = compact_list_repr(shape_repr(node.output_shape, sep=shape_sep))
+        elif self.show_shapes:
+            input_repr = compact_list_repr(shape_repr(node.input_shape, sep=shape_sep))
+            output_repr = compact_list_repr(shape_repr(node.output_shape, sep=shape_sep))
+            if param_pos == 'right':
+                label = f'''<
+                    <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
+                    CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
+                    <TR>
+                        <TD ROWSPAN="{head_row_span + len(additional_params)}"
+                        BGCOLOR="{color}">{node.name}<BR/>depth:{node.depth}</TD>
+                        <TD>{input_str}:</TD>
+                        <TD>{input_repr}</TD>
+                    </TR>
+                    <TR>
+                        <TD>{output_str}:</TD>
+                        <TD>{output_repr}</TD>
+                    </TR>
+                    {additional_params}
+                    </TABLE>>'''
+            elif param_pos == 'bottom':
                 label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
@@ -432,13 +484,19 @@ class ComputationGraph:
                         {additional_params}
                     </TABLE>>'''
         else:
-            label = f'''<
+            if param_pos == 'right':
+                label = f'''<
+                    <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
+                    CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
+                        <TR><TD BGCOLOR="{color}">{node.name}<BR/>depth:{node.depth}</TD></TR>
+                    </TABLE>>'''
+            elif param_pos == 'bottom':
+                label = f'''<
                     <TABLE BORDER="{border}" CELLBORDER="{cell_bor}"
                     CELLSPACING="{cell_sp}" CELLPADDING="{cell_pad}">
                         <TR>
                             <TD BGCOLOR="{color}" ALIGN="LEFT">{node.name}<BR ALIGN="LEFT"/>[depth:{node.depth}]</TD>
                         </TR>
-                        {additional_params}
                     </TABLE>>'''
         return label
 

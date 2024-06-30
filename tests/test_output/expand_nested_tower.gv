@@ -3,261 +3,252 @@ strict digraph model {
 	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(1, 10)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">input-tensor<BR/>depth:0</TD><TD>(1, 10)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	subgraph cluster_2 {
 		color=black fontsize=12 label=Tower labeljust=l style=dashed
 		1 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		2 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 	}
 	subgraph cluster_3 {
 		color=black fontsize=12 label=Tower labeljust=l style=dashed
 		3 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		4 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		5 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 	}
 	6 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >add<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">add<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>2x(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	subgraph cluster_4 {
 		color=black fontsize=12 label=Tower labeljust=l style=dashed
 		7 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		8 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		9 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 		10 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >LazyLinear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (0)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="225"
+                        BGCOLOR="deepskyblue1">LazyLinear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(0)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (0)</TD>
+                    <TD>bias:</TD>
+                    <TD>(0)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 	}
 	11 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >add<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> 2x(1, 10)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 10)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">add<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>2x(1, 10)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 10)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	12 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(1, 10)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">output-tensor<BR/>depth:0</TD><TD>(1, 10)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	0 -> 1
 	1 -> 2
 	2 -> 6

@@ -426,6 +426,63 @@ def test_dark_theme_with_custom_colors(verify_result: Callable[..., Any]) -> Non
     verify_result([model_graph])
 
 
+def test_dark_custom_html_config(verify_result: Callable[..., Any]) -> None:
+    model = MLP()
+    model_graph = draw_graph(
+        model, input_size=(1, 128),
+        graph_name='MLP',
+        dark_mode=True,
+        html_config={
+            'cell_padding': 4,
+            'tensor_shape_sep': 'x',
+            'fill_node': False,
+        },
+        node_attr={
+            'fillcolor': '#f0f0f090',
+        },
+        edge_attr={
+            'style': 'dotted',
+            'color': 'gray',
+        },
+    )
+    model_graph_2 = draw_graph(
+        model, input_size=(1, 128),
+        graph_name='MLP',
+        dark_mode=True,
+        html_config={
+            'cell_padding': 4,
+            'tensor_shape_sep': 'x',
+            'param_pos': 'bottom',
+        },
+        node_attr={
+            'fillcolor': '#f0f0f090',
+        },
+        edge_attr={
+            'style': 'dotted',
+            'color': 'gray',
+        },
+    )
+    verify_result([model_graph, model_graph_2])
+
+
+def test_custom_colors(verify_result: Callable[..., Any]) -> None:
+    model = SiameseNets()
+    model_graph = draw_graph(
+        model, input_size=[(1, 1, 88, 88), (1, 1, 88, 88)],
+        graph_name='SiameseNets',
+        color_scheme=ColorScheme(
+            TensorNode='darkseagreen4',
+            ModuleNode='cadetblue4',
+            FunctionNode='darkgoldenrod4',
+            conv='deepskyblue4',
+            dropout='deeppink4',
+            linear='darkorchid4',
+            pooling='indianred4',
+        ),
+    )
+    verify_result([model_graph])
+
+
 def test_custom_html_config(verify_result: Callable[..., Any]) -> None:
     model = MLP()
     model_graph = draw_graph(
@@ -434,13 +491,30 @@ def test_custom_html_config(verify_result: Callable[..., Any]) -> None:
         html_config={
             'cell_padding': 4,
             'tensor_shape_sep': 'x',
+            'fill_node': False,
         },
         node_attr={
-            'fillcolor': '#72976290',
+            'fillcolor': '#f0f0f090',
         },
         edge_attr={
             'style': 'dotted',
             'color': 'gray',
         },
     )
-    verify_result([model_graph])
+    model_graph_2 = draw_graph(
+        model, input_size=(1, 128),
+        graph_name='MLP',
+        html_config={
+            'cell_padding': 4,
+            'tensor_shape_sep': 'x',
+            'param_pos': 'bottom',
+        },
+        node_attr={
+            'fillcolor': '#f0f0f090',
+        },
+        edge_attr={
+            'style': 'dotted',
+            'color': 'gray',
+        },
+    )
+    verify_result([model_graph, model_graph_2])

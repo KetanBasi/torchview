@@ -3,68 +3,52 @@ strict digraph IsolatedTensor {
 	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(1, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">input-tensor<BR/>depth:0</TD><TD>(1, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	1 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >Linear<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 2)</TD>
-                        </TR>
-                                        <TR>
-                    <TD ALIGN="LEFT"><B>weight</B> (2, 32)</TD>
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="229"
+                        BGCOLOR="deepskyblue1">Linear<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 2)</TD>
+                    </TR>
+                                    <TR>
+                    <TD>weight:</TD>
+                    <TD>(2, 32)</TD>
                 </TR>
                 <TR>
-                    <TD ALIGN="LEFT"><B>bias</B> (2)</TD>
+                    <TD>bias:</TD>
+                    <TD>(2)</TD>
                 </TR>
-                    </TABLE>>]
+                    </TABLE>> fillcolor=deepskyblue1]
 	2 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >add<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (1, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (1, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">add<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>(1, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(1, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	3 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(1, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">output-tensor<BR/>depth:0</TD><TD>(1, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	0 -> 1
 	1 -> 2
 	2 -> 3

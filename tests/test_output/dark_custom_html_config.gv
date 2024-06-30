@@ -1,18 +1,18 @@
 strict digraph MLP {
-	graph [ordering=in rankdir=TB size="12.0,12.0"]
-	node [align=left color="#909090" fillcolor="#f0f0f090" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
-	edge [color=gray fontsize=10 style=dotted]
+	graph [bgcolor="#404040" fontcolor=white ordering=in rankdir=TB size="12.0,12.0"]
+	node [align=left color="#1c1c1c" fillcolor="#f0f0f090" fontcolor=white fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	edge [color=gray fontcolor=white fontsize=10 style=dotted]
 	0 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD BGCOLOR="lightyellow">input-tensor<BR/>depth:0</TD><TD>(1x128)</TD></TR>
+                        <TR><TD BGCOLOR="darkgoldenrod4">input-tensor<BR/>depth:0</TD><TD>(1x128)</TD></TR>
                     </TABLE>>]
 	1 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="231"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x128)</TD>
                     </TR>
@@ -34,7 +34,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="2"
-                        BGCOLOR="indianred1">ReLU<BR/>depth:2</TD>
+                        BGCOLOR="firebrick">ReLU<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x64)</TD>
                     </TR>
@@ -49,7 +49,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="230"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x64)</TD>
                     </TR>
@@ -71,7 +71,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="2"
-                        BGCOLOR="indianred1">ReLU<BR/>depth:2</TD>
+                        BGCOLOR="firebrick">ReLU<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x32)</TD>
                     </TR>
@@ -86,7 +86,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="230"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x32)</TD>
                     </TR>
@@ -108,7 +108,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="2"
-                        BGCOLOR="indianred1">ReLU<BR/>depth:2</TD>
+                        BGCOLOR="firebrick">ReLU<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x16)</TD>
                     </TR>
@@ -123,7 +123,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="228"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x16)</TD>
                     </TR>
@@ -145,7 +145,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="2"
-                        BGCOLOR="indianred1">ReLU<BR/>depth:2</TD>
+                        BGCOLOR="firebrick">ReLU<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x8)</TD>
                     </TR>
@@ -160,7 +160,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="227"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x8)</TD>
                     </TR>
@@ -182,7 +182,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="2"
-                        BGCOLOR="indianred1">ReLU<BR/>depth:2</TD>
+                        BGCOLOR="firebrick">ReLU<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x4)</TD>
                     </TR>
@@ -197,7 +197,7 @@ strict digraph MLP {
                     CELLSPACING="0" CELLPADDING="4">
                     <TR>
                         <TD ROWSPAN="227"
-                        BGCOLOR="deepskyblue1">Linear<BR/>depth:2</TD>
+                        BGCOLOR="dodgerblue4">Linear<BR/>depth:2</TD>
                         <TD>input:</TD>
                         <TD>(1x4)</TD>
                     </TR>
@@ -217,7 +217,7 @@ strict digraph MLP {
 	12 [label=<
                     <TABLE BORDER="0" CELLBORDER="1"
                     CELLSPACING="0" CELLPADDING="4">
-                        <TR><TD BGCOLOR="lightyellow">output-tensor<BR/>depth:0</TD><TD>(1x2)</TD></TR>
+                        <TR><TD BGCOLOR="darkgoldenrod4">output-tensor<BR/>depth:0</TD><TD>(1x2)</TD></TR>
                     </TABLE>>]
 	0 -> 1
 	1 -> 2
@@ -233,14 +233,14 @@ strict digraph MLP {
 	11 -> 12
 }
 strict digraph MLP {
-	graph [ordering=in rankdir=TB size="12.0,12.0"]
-	node [align=left color="#909090" fillcolor="#f0f0f090" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
-	edge [color=gray fontsize=10 style=dotted]
+	graph [bgcolor="#404040" fontcolor=white ordering=in rankdir=TB size="12.0,12.0"]
+	node [align=left color="#1c1c1c" fillcolor="#f0f0f090" fontcolor=white fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
+	edge [color=gray fontcolor=white fontsize=10 style=dotted]
 	0 [label=<
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            <TD BGCOLOR="darkgoldenrod4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
                         </TR>
@@ -252,7 +252,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -271,7 +271,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -287,7 +287,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -306,7 +306,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -322,7 +322,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -341,7 +341,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -357,7 +357,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -376,7 +376,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -392,7 +392,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -411,7 +411,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="indianred1" ALIGN="LEFT"
+                            <TD BGCOLOR="firebrick" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >ReLU<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -427,7 +427,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="deepskyblue1" ALIGN="LEFT"
+                            <TD BGCOLOR="dodgerblue4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >Linear<BR ALIGN="LEFT"/>[depth:2]</TD>
                         </TR>
@@ -446,7 +446,7 @@ strict digraph MLP {
                     <TABLE BORDER="1" CELLBORDER="0"
                     CELLSPACING="0" CELLPADDING="4">
                         <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
+                            <TD BGCOLOR="darkgoldenrod4" ALIGN="LEFT"
                             BORDER="1" SIDES="B"
                             >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
                         </TR>

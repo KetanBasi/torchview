@@ -3,856 +3,580 @@ strict digraph "custom-attention" {
 	node [align=left color="#909090" fillcolor="#ffffff90" fontname="Linux libertine" fontsize=10 height=0.2 margin=0 ranksep=0.1 shape=plaintext style=filled]
 	edge [fontsize=10]
 	0 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >input-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">input-tensor<BR/>depth:0</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	1 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >layer_norm<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">layer_norm<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	2 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	3 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >linear<BR ALIGN="LEFT"/>[depth:3]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 384)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">linear<BR/>depth:3</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 384)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	4 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 384)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 384)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	5 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >split<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 384)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> 3x(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">split<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 384)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>3x(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	6 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	7 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	8 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	9 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >view<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">view<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	10 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 4, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	11 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >transpose<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">transpose<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	12 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	13 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >view<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">view<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	14 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 4, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	15 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >transpose<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">transpose<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	16 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	17 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >view<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">view<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	18 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 4, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	19 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >transpose<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">transpose<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	20 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	21 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >transpose<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 32, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">transpose<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 32, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	22 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 32, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 32, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	23 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >matmul<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 32), (7, 4, 32, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">matmul<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 32), (7, 4, 32, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	24 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	25 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >mul<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">mul<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	26 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	27 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >masked_fill<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">masked_fill<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	28 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	29 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >softmax<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">softmax<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	30 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	31 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >dropout<BR ALIGN="LEFT"/>[depth:3]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">dropout<BR/>depth:3</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 2)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	32 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 2)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 2)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	33 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >matmul<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 2), (7, 4, 2, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">matmul<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 2), (7, 4, 2, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	34 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 4, 2, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 4, 2, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	35 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >transpose<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 4, 2, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">transpose<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 4, 2, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	36 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 4, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	37 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >contiguous<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">contiguous<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	38 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 4, 32)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 4, 32)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	39 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >view<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 4, 32)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">view<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 4, 32)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	40 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	41 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >linear<BR ALIGN="LEFT"/>[depth:3]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">linear<BR/>depth:3</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	42 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:2</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	43 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >dropout<BR ALIGN="LEFT"/>[depth:3]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">dropout<BR/>depth:3</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	44 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	45 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >add<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> 2x(7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">add<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>2x(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	46 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	47 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >layer_norm<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">layer_norm<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	48 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	49 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >linear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 512)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">linear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 512)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	50 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 512)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 512)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	51 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >relu<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 512)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 512)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">relu<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 512)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 512)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	52 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 512)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 512)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	53 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >linear<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 512)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">linear<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 512)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	54 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	55 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >dropout<BR ALIGN="LEFT"/>[depth:2]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> (7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">dropout<BR/>depth:2</TD>
+                        <TD>input:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	56 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >hidden-tensor<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">hidden-tensor<BR/>depth:1</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	57 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="aliceblue" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >add<BR ALIGN="LEFT"/>[depth:1]</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>I</B> 2x(7, 2, 128)</TD>
-                        </TR>
-                        <TR>
-                            <TD ALIGN="LEFT"><B>O</B> (7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                    <TR>
+                        <TD ROWSPAN="2"
+                        BGCOLOR="aliceblue">add<BR/>depth:1</TD>
+                        <TD>input:</TD>
+                        <TD>2x(7, 2, 128)</TD>
+                    </TR>
+                    <TR>
+                        <TD>output:</TD>
+                        <TD>(7, 2, 128)</TD>
+                    </TR>
+                    
+                    </TABLE>> fillcolor=aliceblue]
 	58 [label=<
-                    <TABLE BORDER="1" CELLBORDER="0"
-                    CELLSPACING="0" CELLPADDING="2">
-                        <TR>
-                            <TD BGCOLOR="lightyellow" ALIGN="LEFT"
-                            BORDER="1" SIDES="B"
-                            >output-tensor<BR ALIGN="LEFT"/>[depth:0]</TD>
-                        </TR>
-                        <TR>
-                            <TD>(7, 2, 128)</TD>
-                        </TR>
-                        
-                    </TABLE>>]
+                    <TABLE BORDER="0" CELLBORDER="1"
+                    CELLSPACING="0" CELLPADDING="4">
+                        <TR><TD BGCOLOR="lightyellow">output-tensor<BR/>depth:0</TD><TD>(7, 2, 128)</TD></TR>
+                    </TABLE>> fillcolor=lightyellow]
 	0 -> 45
 	0 -> 1
 	1 -> 2
