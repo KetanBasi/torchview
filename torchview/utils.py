@@ -1,11 +1,18 @@
 from __future__ import annotations
 
+import sys
+
 from collections import defaultdict
 from collections.abc import Iterable
 from typing import TypeVar, MutableSet, Any, Generator
 
 from torch import nn
 from torch.nn.parameter import Parameter
+
+try:
+    import transformers as tr
+except ImportError:
+    pass
 
 T = TypeVar('T')
 
@@ -102,4 +109,29 @@ def get_torch_layer_types() -> dict:
             except AttributeError:
                 continue
 
+    return _layer_types
+
+
+def get_hf_layer_types() -> dict:
+    '''Get mapping of layer types to their respective modules.'''
+    _layer_types = dict()
+
+    if 'transformers' not in sys.modules:
+        return _layer_types
+
+    # TODO: Add TF support (e.g. from `hf.activations_tf.ACT2FN`)
+    _name = "activation"
+    modules = tr.activations.ACT2CLS
+
+    for _, module in modules.items():
+        module = module[0] if isinstance(module, tuple) else module
+        _layer_types[module.__name__] = _name
+
+    return _layer_types
+
+
+def get_layer_types() -> dict:
+    '''Get mapping of layer types to their respective modules.'''
+    _layer_types = get_torch_layer_types()
+    _layer_types.update(get_hf_layer_types())
     return _layer_types

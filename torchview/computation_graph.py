@@ -11,7 +11,7 @@ from torch.nn.modules import Identity
 from .computation_node import NodeContainer
 from .computation_node import TensorNode, ModuleNode, FunctionNode
 from .scheme import ColorScheme, LIGHT_THEME, DARK_THEME
-from .utils import updated_dict, assert_input_type, get_torch_layer_types
+from .utils import updated_dict, assert_input_type, get_layer_types
 
 COMPUTATION_NODES = Union[TensorNode, ModuleNode, FunctionNode]
 
@@ -20,7 +20,7 @@ COMPUTATION_NODES = Union[TensorNode, ModuleNode, FunctionNode]
 #     ModuleNode: "darkseagreen1",
 #     FunctionNode: "aliceblue",
 # }
-_LAYER_TYPE_MAPPING = get_torch_layer_types()
+_LAYER_TYPE_MAPPING = get_layer_types()
 
 # TODO: Currently, we only use directed graphviz graph since DNN are
 # graphs except for e.g. graph neural network (GNN). Experiment on GNN
